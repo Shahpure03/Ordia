@@ -9,7 +9,7 @@
  */
 
 import { useState } from "react";
-import { Header } from "@/components/Header";
+import { Header } from "./components/Header";
 import { MonthlyGoals } from "@/components/HabitGrid";
 import { DayLog } from "@/components/DayLog";
 import { ProgressChart } from "@/components/ProgressChart";
