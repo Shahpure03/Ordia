@@ -1,73 +1,114 @@
-# React + TypeScript + Vite
+# Ordia ✨  
+*A calm system for habits, tasks, and daily reflection.*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ordia is a personal organization web app designed to bring **clarity over chaos**.  
+It combines habit tracking, flexible to-dos, daily journaling, and visual progress — all in one focused space.
 
-Currently, two official plugins are available:
+No clutter. No pressure. Just structure that adapts to you.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌱 Why Ordia?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Most productivity apps shout. Ordia whispers.
 
-## Expanding the ESLint configuration
+It’s built around a simple idea:  
+> consistency grows better in calm environments.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Ordia lets you:
+- Track habits without guilt
+- Plan tasks without rigidity
+- Reflect on your day without friction
+- See progress without obsession
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Core Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🧠 Habit Tracker
+- Checkbox-based daily habits
+- Visual streaks & progress insights
+- Designed to encourage showing up, not perfection
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 📝 Daily Thoughts
+- A space to log what happened today
+- Free-form reflections, wins, or notes
+- Stored per day, navigable through time
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ✅ Smart To-Do System
+- Tasks grouped by status: **Yet to do · In progress · Done**
+- Add tasks retroactively (missed adding? no problem)
+- Expandable task view for full flexibility
+- Priority-aware without being overwhelming
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📅 Time Navigation
+- Horizontal date slider
+- Move forward or backward in time
+- Review what you planned, what you completed, and how days differed
+
+### 📊 Progress Visualization
+- Clean charts to reflect habits & task completion
+- Trends over time, not vanity metrics
+
+---
+
+## 🧩 Tech Stack
+
+### Frontend
+- **React + Vite**
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **Radix UI**
+- **Charting library** (for progress visuals)
+
+### Backend (planned / in progress)
+- **Python**
+- **PostgreSQL**
+- OAuth-based authentication (Google Login)
+
+---
+
+## 🔐 Authentication
+- Google OAuth (secure & familiar)
+- Designed for future extensibility (multiple providers)
+
+---
+
+## 🎨 Design Philosophy
+
+- Soft colors, low contrast
+- Motion that feels like breathing, not blinking
+- Interfaces that stay out of the way
+
+Ordia is intentionally minimal — every element must earn its place.
+
+---
+
+## 🚧 Project Status
+
+> Actively building 🚀
+
+Current focus:
+- Frontend flow & UI polish
+- Local demo data → backend integration
+- Deployment of initial version
+
+Planned next:
+- Social challenges (habit accountability with friends)
+- Deeper analytics
+- Mobile-first refinements
+
+---
+
+## 🛠️ Local Setup
+
+```bash
+# clone the repo
+git clone https://github.com/your-username/ordia.git
+
+# install dependencies
+npm install
+
+# start dev server
+npm run dev
