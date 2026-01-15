@@ -1,4 +1,4 @@
-# Ordia ✨  
+# Ordia ✨  🌸
 *A calm system for habits, tasks, and daily reflection.*
 
 Ordia is a personal organization web app designed to bring **clarity over chaos**.  
