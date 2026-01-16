@@ -5,12 +5,8 @@
  */
 
 import { useState } from "react";
-
-
 import type { OrdiaStateHook } from "@/hooks/useOrdiaState";
 import { cn } from "@/lib/utils";
-
-
 import { Maximize2 } from "lucide-react";
 
 interface TodoListProps {
@@ -19,7 +15,6 @@ interface TodoListProps {
     toggleTodo: OrdiaStateHook["toggleTodo"];
     deleteTodo: OrdiaStateHook["deleteTodo"];
     selectedDate: Date;
-
     onExpand: () => void;
 }
 
@@ -29,7 +24,6 @@ export function TodoList({
     toggleTodo,
     deleteTodo,
     selectedDate,
-
     onExpand
 }: TodoListProps) {
     const [newTodoText, setNewTodoText] = useState("");
