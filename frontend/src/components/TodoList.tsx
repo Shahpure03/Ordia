@@ -10,7 +10,7 @@ import { useState } from "react";
 import type { OrdiaStateHook } from "@/hooks/useOrdiaState";
 import { cn } from "@/lib/utils";
 
-import { DateNavigator } from "./DateNavigator";
+
 import { Maximize2 } from "lucide-react";
 
 interface TodoListProps {
@@ -19,7 +19,7 @@ interface TodoListProps {
     toggleTodo: OrdiaStateHook["toggleTodo"];
     deleteTodo: OrdiaStateHook["deleteTodo"];
     selectedDate: Date;
-    onDateChange: (date: Date) => void;
+
     onExpand: () => void;
 }
 
@@ -29,7 +29,7 @@ export function TodoList({
     toggleTodo,
     deleteTodo,
     selectedDate,
-    onDateChange,
+
     onExpand
 }: TodoListProps) {
     const [newTodoText, setNewTodoText] = useState("");
@@ -42,7 +42,7 @@ export function TodoList({
         }
     };
 
-    const handleKeyPress = (e: React.KeyboardEvent) => {
+    const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === "Enter") {
             handleAddTodo();
         }
@@ -81,7 +81,7 @@ export function TodoList({
                         placeholder="Add a new task..."
                         value={newTodoText}
                         onChange={(e) => setNewTodoText(e.target.value)}
-                        onKeyPress={handleKeyPress}
+                        onKeyDown={handleKeyDown}
                         className="flex-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-blue-400 focus:ring-2 focus:ring-blue-400 focus:outline-none bg-transparent"
                     />
                     <button

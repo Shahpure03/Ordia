@@ -1,4 +1,4 @@
-import path from "path"
+import path from "node:path"
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -11,7 +11,8 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'icon-192.png', 'icon-512.png'],
+      injectRegister: 'auto',
+      includeAssets: ['favicon.svg', 'icon-192.png', 'icon-512.png'],
       manifest: {
         name: 'Ordia',
         short_name: 'Ordia',
@@ -46,7 +47,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./frontend/src"),
+      "@": path.resolve(import.meta.dirname, "./frontend/src"),
     },
   },
 })

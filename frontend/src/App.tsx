@@ -75,7 +75,7 @@ function App() {
               toggleTodo={toggleTodo}
               deleteTodo={deleteTodo}
               selectedDate={selectedDate}
-              onDateChange={setSelectedDate}
+
               onExpand={() => setIsAdvancedTodoOpen(true)}
             />
             {/* Day log also follows selected date but for now internal logic might need update.

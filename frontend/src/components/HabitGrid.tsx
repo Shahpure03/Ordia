@@ -55,12 +55,12 @@ export function MonthlyGoals({ habits, completions, toggleHabit, addHabit, delet
     const handleAddGoal = () => {
         if (newGoalName.trim()) {
             // Use a standard emoji for all new goals
-            addHabit(newGoalName.trim(), "🎯");
+            addHabit(newGoalName.trim(), "✨");
             setNewGoalName("");
         }
     };
 
-    const handleKeyPress = (e: React.KeyboardEvent) => {
+    const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === "Enter") {
             handleAddGoal();
         }
@@ -71,7 +71,7 @@ export function MonthlyGoals({ habits, completions, toggleHabit, addHabit, delet
             <div className="p-6 pb-3">
                 <div className="flex items-center justify-between">
                     <h3 className="text-base sm:text-lg font-medium text-gray-700 flex items-center gap-2">
-                        <span>🎯</span>
+                        <span>✨</span>
                         Monthly Goals
                     </h3>
                     <span className="text-sm text-blue-600 font-medium">
@@ -182,7 +182,7 @@ export function MonthlyGoals({ habits, completions, toggleHabit, addHabit, delet
                         placeholder="Add new monthly goal..."
                         value={newGoalName}
                         onChange={(e) => setNewGoalName(e.target.value)}
-                        onKeyPress={handleKeyPress}
+                        onKeyDown={handleKeyDown}
                         className="flex-1 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-blue-400 focus:ring-2 focus:ring-blue-400 focus:outline-none bg-transparent"
                     />
                     <button
