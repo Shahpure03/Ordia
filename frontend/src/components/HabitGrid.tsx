@@ -67,8 +67,8 @@ export function MonthlyGoals({ habits, completions, toggleHabit, addHabit, delet
     };
 
     return (
-        <div className="border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl">
-            <div className="p-6 pb-3">
+        <div className="border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden">
+            <div className="p-4 sm:p-6 pb-3">
                 <div className="flex items-center justify-between">
                     <h3 className="text-base sm:text-lg font-medium text-gray-700 flex items-center gap-2">
                         <span>✨</span>
@@ -82,12 +82,13 @@ export function MonthlyGoals({ habits, completions, toggleHabit, addHabit, delet
                     <p className="text-sm text-gray-500">{monthName}</p>
                 </div>
             </div>
-            <div className="p-6 pt-0">
+            <div className="p-4 sm:p-6 pt-0">
                 {/* Scrollable container for the grid */}
                 <div className="overflow-x-auto mb-6">
                     <div className="min-w-max">
                         {/* Date headers */}
-                        <div className="flex gap-2 mb-3 ml-36">
+                        <div className="flex gap-2 mb-3">
+                            <div className="sticky left-0 z-10 w-36 bg-white/95 backdrop-blur-sm pr-2 flex-shrink-0" />
                             {monthDates.map((date) => {
                                 const isToday = formatDate(date) === formatDate(today);
                                 return (
@@ -110,18 +111,18 @@ export function MonthlyGoals({ habits, completions, toggleHabit, addHabit, delet
                         {habits.map((habit) => (
                             <div key={habit.id} className="flex items-center gap-2 mb-2">
                                 {/* Habit name and delete button */}
-                                <div className="w-36 flex items-center gap-2 pr-2 group">
-                                    <button
-                                        onClick={() => deleteHabit(habit.id)}
-                                        className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-red-500 transition-opacity p-1 -ml-6 absolute"
-                                        title="Delete goal"
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" /></svg>
-                                    </button>
+                                <div className="sticky left-0 z-10 w-36 flex items-center gap-2 pr-2 bg-white/95 backdrop-blur-sm group flex-shrink-0 border-r border-gray-100/50">
                                     <span className="text-lg">{habit.emoji}</span>
-                                    <span className="text-sm text-gray-600 truncate font-medium">
+                                    <span className="text-sm text-gray-700 truncate font-medium flex-1">
                                         {habit.name}
                                     </span>
+                                    <button
+                                        onClick={() => deleteHabit(habit.id)}
+                                        className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-red-500 transition-opacity p-1"
+                                        title="Delete goal"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" /></svg>
+                                    </button>
                                 </div>
 
                                 {/* Completion cells - clearly blue */}

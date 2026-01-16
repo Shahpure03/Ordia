@@ -48,8 +48,8 @@ export function ProgressChart({ getCompletionHistory }: ProgressChartProps) {
 
     return (
 
-        <div className="border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl flex flex-col">
-            <div className="p-6 pb-2">
+        <div className="border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl flex flex-col overflow-hidden">
+            <div className="p-4 sm:p-6 pb-2">
                 <h3 className="text-lg font-medium text-gray-700 flex items-center justify-between">
                     <span className="flex items-center gap-2">
                         <span>📈</span>
@@ -62,7 +62,7 @@ export function ProgressChart({ getCompletionHistory }: ProgressChartProps) {
                 </p>
             </div>
 
-            <div className="p-6 pt-0 w-full" style={{ height: 250 }}>
+            <div className="p-4 sm:p-6 pt-0 w-full" style={{ height: 250 }}>
                 <ResponsiveContainer width="100%" height="100%">
                     <AreaChart
                         data={data}
@@ -116,7 +116,7 @@ export function ProgressChart({ getCompletionHistory }: ProgressChartProps) {
                 </ResponsiveContainer>
             </div>
 
-            <div className="p-6 pt-0">
+            <div className="p-4 sm:p-6 pt-0">
                 <div className="flex w-full items-start gap-2 text-sm">
                     <div className="grid gap-1">
                         <div className="flex items-center gap-2 leading-none font-medium text-gray-700">

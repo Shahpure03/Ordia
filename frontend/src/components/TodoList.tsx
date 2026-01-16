@@ -45,8 +45,8 @@ export function TodoList({
     const completedCount = todos.filter((t) => t.completed).length;
 
     return (
-        <div className="border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl">
-            <div className="p-6 pb-3">
+        <div className="border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden">
+            <div className="p-4 sm:p-6 pb-3">
                 <div className="flex items-center justify-between mb-4">
                     <h3 className="text-base sm:text-lg font-medium text-gray-700 flex items-center gap-2">
                         <span>✅</span>
@@ -67,7 +67,7 @@ export function TodoList({
                 </div>
 
             </div>
-            <div className="p-6 pt-0 space-y-3">
+            <div className="p-4 sm:p-6 pt-0 space-y-3">
                 {/* Add new todo input */}
                 <div className="flex gap-2">
                     <input

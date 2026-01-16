@@ -68,7 +68,7 @@ function App() {
         {/* Main content grid */}
         <div className="grid gap-6 lg:gap-8 lg:grid-cols-3">
           {/* Left column: To-Do List and Daily Log */}
-          <div className="space-y-6">
+          <div className="space-y-6 min-w-0">
             <TodoList
               getTodos={getTodos}
               addTodo={addTodo}
@@ -99,7 +99,7 @@ function App() {
           </div>
 
           {/* Right column: Monthly Goals and Progress (takes 2 cols) */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-6 min-w-0">
             <MonthlyGoals
               habits={habits}
               completions={completions}

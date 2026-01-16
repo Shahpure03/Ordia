@@ -64,7 +64,7 @@ export function CalendarWidget({ selectedDate, onDateChange }: CalendarWidgetPro
     };
 
     return (
-        <div className="border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl p-6">
+        <div className="border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl p-4 sm:p-6">
             <div className="flex items-center justify-between mb-4">
                 <h3 className="font-medium text-gray-700">
                     {viewDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })}

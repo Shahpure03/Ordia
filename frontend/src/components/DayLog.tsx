@@ -19,8 +19,8 @@ export function DayLog({ updateLog, getLog, selectedDate }: DayLogProps) {
     const isToday = formatDate(selectedDate) === formatDate(new Date());
 
     return (
-        <div className="mb-8 border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl">
-            <div className="p-6 pb-4">
+        <div className="mb-8 border-0 shadow-sm bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden">
+            <div className="p-4 sm:p-6 pb-4">
                 <h3 className="text-lg font-medium text-gray-700 flex items-center gap-2">
                     <span>✍️</span>
                     Daily Log
@@ -29,7 +29,7 @@ export function DayLog({ updateLog, getLog, selectedDate }: DayLogProps) {
                     </span>
                 </h3>
             </div>
-            <div className="p-6 pt-0">
+            <div className="p-4 sm:p-6 pt-0">
                 <DayLogEntry
                     key={formatDate(selectedDate)}
                     date={selectedDate}
