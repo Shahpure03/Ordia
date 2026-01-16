@@ -1,21 +1,21 @@
-# Ordia ✨  🌸
+# Ordiaa ✨  🌸
 *A calm system for habits, tasks, and daily reflection.*
 
-Ordia is a personal organization web app designed to bring **clarity over chaos**.  
+Ordiaa is a personal organization web app designed to bring **clarity over chaos**.  
 It combines habit tracking, flexible to-dos, daily journaling, and visual progress — all in one focused space.
 
 No clutter. No pressure. Just structure that adapts to you.
 
 ---
 
-## 🌱 Why Ordia?
+## 🌱 Why Ordiaa?
 
-Most productivity apps shout. Ordia whispers.
+Most productivity apps shout. Ordiaa whispers.
 
 It’s built around a simple idea:  
 > consistency grows better in calm environments.
 
-Ordia lets you:
+Ordiaa lets you:
 - Track habits without guilt
 - Plan tasks without rigidity
 - Reflect on your day without friction
@@ -81,7 +81,7 @@ Ordia lets you:
 - Motion that feels like breathing, not blinking
 - Interfaces that stay out of the way
 
-Ordia is intentionally minimal — every element must earn its place.
+Ordiaa is intentionally minimal — every element must earn its place.
 
 ---
 
@@ -105,7 +105,7 @@ Planned next:
 
 ```bash
 # clone the repo
-git clone https://github.com/your-username/ordia.git
+git clone https://github.com/your-username/ordiaa.git
 
 # install dependencies
 npm install

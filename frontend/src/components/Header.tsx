@@ -34,7 +34,7 @@ export function Header() {
                 <div className="flex items-center gap-3 mb-4">
                     <span className="text-3xl">🌸</span>
                     <h1 className="text-2xl font-semibold text-gray-700 tracking-tight">
-                        Ordia
+                        Ordiaa
                     </h1>
                 </div>
 

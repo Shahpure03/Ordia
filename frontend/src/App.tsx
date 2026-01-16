@@ -1,5 +1,5 @@
 /**
- * App Component - Ordia Dashboard
+ * App Component - Ordiaa Dashboard
  * Main entry point that brings together all sections:
  * - Header with date and daily quote
  * - Daily To-Do list for today's tasks
@@ -17,7 +17,7 @@ import { TodoList } from "@/components/TodoList";
 import { AdvancedTodoView } from "@/components/AdvancedTodoView";
 import { CalendarWidget } from "@/components/CalendarWidget";
 import { LoadingScreen } from "@/components/LoadingScreen";
-import { useOrdiaState } from "@/hooks/useOrdiaState";
+import { useOrdiaaState } from "@/hooks/useOrdiaState";
 
 function App() {
   // Initialize the shared app state from our custom hook
@@ -35,7 +35,7 @@ function App() {
     getCompletionHistory,
     addHabit,
     deleteHabit,
-  } = useOrdiaState();
+  } = useOrdiaaState();
 
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [isAdvancedTodoOpen, setIsAdvancedTodoOpen] = useState(false);
@@ -113,7 +113,7 @@ function App() {
 
         {/* Footer */}
         <footer className="mt-12 text-center text-gray-400 text-sm">
-          <p>🌸 Ordia — calm habits, daily progress</p>
+          <p>🌸 Ordiaa — calm habits, daily progress</p>
         </footer>
       </main>
     </div>

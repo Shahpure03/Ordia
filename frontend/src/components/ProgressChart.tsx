@@ -7,11 +7,11 @@
 import { useMemo } from "react";
 import { TrendingUp } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, XAxis, Tooltip, ResponsiveContainer, YAxis } from "recharts";
-import type { OrdiaStateHook } from "@/hooks/useOrdiaState";
+import type { OrdiaaStateHook } from "@/hooks/useOrdiaState";
 import { cn } from "@/lib/utils";
 
 interface ProgressChartProps {
-    getCompletionHistory: OrdiaStateHook["getCompletionHistory"];
+    getCompletionHistory: OrdiaaStateHook["getCompletionHistory"];
 }
 
 const CustomTooltip = ({ active, payload, label }: any) => {

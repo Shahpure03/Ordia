@@ -14,8 +14,8 @@ export default defineConfig({
       injectRegister: 'auto',
       includeAssets: ['favicon.svg', 'icon-192.png', 'icon-512.png'],
       manifest: {
-        name: 'Ordia',
-        short_name: 'Ordia',
+        name: 'Ordiaa',
+        short_name: 'Ordiaa',
         description: 'A calm habit tracking and daily log system',
         theme_color: '#c084fc',
         background_color: '#fdf2f8',

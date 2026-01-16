@@ -7,15 +7,15 @@
 import { useMemo, useState } from "react";
 
 import { getMonthDates, formatDate } from "@/lib/storage";
-import type { OrdiaStateHook } from "@/hooks/useOrdiaState";
+import type { OrdiaaStateHook } from "@/hooks/useOrdiaState";
 import { cn } from "@/lib/utils";
 
 interface MonthlyGoalsProps {
-    habits: OrdiaStateHook["habits"];
-    completions: OrdiaStateHook["completions"];
-    toggleHabit: OrdiaStateHook["toggleHabit"];
-    addHabit: OrdiaStateHook["addHabit"];
-    deleteHabit: OrdiaStateHook["deleteHabit"];
+    habits: OrdiaaStateHook["habits"];
+    completions: OrdiaaStateHook["completions"];
+    toggleHabit: OrdiaaStateHook["toggleHabit"];
+    addHabit: OrdiaaStateHook["addHabit"];
+    deleteHabit: OrdiaaStateHook["deleteHabit"];
 }
 
 export function MonthlyGoals({ habits, completions, toggleHabit, addHabit, deleteHabit }: MonthlyGoalsProps) {

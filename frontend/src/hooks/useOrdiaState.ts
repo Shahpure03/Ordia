@@ -1,16 +1,16 @@
 /**
- * Custom React hook for managing Ordia app state
+ * Custom React hook for managing Ordiaa app state
  * This is the single source of truth for all app data
  * State persists to localStorage automatically
  */
 
 import { useState, useEffect, useCallback } from "react";
-import type { OrdiaState, Habit, TodoItem, TodoPriority, TodoStatus } from "@/lib/types";
+import type { OrdiaaState, Habit, TodoItem, TodoPriority, TodoStatus } from "@/lib/types";
 import { loadState, saveState, formatDate } from "@/lib/storage";
 
-export function useOrdiaState() {
+export function useOrdiaaState() {
     // Initialize state from localStorage
-    const [state, setState] = useState<OrdiaState>(loadState);
+    const [state, setState] = useState<OrdiaaState>(loadState);
 
     // Save to localStorage whenever state changes
     useEffect(() => {
@@ -222,4 +222,4 @@ export function useOrdiaState() {
 }
 
 // Export the return type so components can use it
-export type OrdiaStateHook = ReturnType<typeof useOrdiaState>;
+export type OrdiaaStateHook = ReturnType<typeof useOrdiaaState>;

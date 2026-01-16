@@ -1,5 +1,5 @@
 /**
- * Type definitions for Ordia app
+ * Type definitions for Ordiaa app
  * These define the shape of our data
  */
 
@@ -34,7 +34,7 @@ export type DailyLogs = Record<string, string>;
 export type DailyTodos = Record<string, TodoItem[]>;
 
 // The complete app state
-export interface OrdiaState {
+export interface OrdiaaState {
     habits: Habit[];
     completions: HabitCompletions;
     logs: DailyLogs;

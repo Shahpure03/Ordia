@@ -37,7 +37,7 @@ export function LoadingScreen({ onFinished }: LoadingScreenProps) {
                     🌸
                 </div>
                 <h1 className="mt-4 text-2xl font-bold text-gray-700 tracking-widest opacity-0 animate-fade-in-delayed">
-                    ORDIA
+                    ORDIAA
                 </h1>
             </div>
         </div>

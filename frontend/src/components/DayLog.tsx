@@ -7,11 +7,11 @@
 import { useState } from "react";
 
 import { formatDate } from "@/lib/storage";
-import type { OrdiaStateHook } from "@/hooks/useOrdiaState";
+import type { OrdiaaStateHook } from "@/hooks/useOrdiaState";
 
 interface DayLogProps {
-    updateLog: OrdiaStateHook["updateLog"];
-    getLog: OrdiaStateHook["getLog"];
+    updateLog: OrdiaaStateHook["updateLog"];
+    getLog: OrdiaaStateHook["getLog"];
     selectedDate: Date;
 }
 

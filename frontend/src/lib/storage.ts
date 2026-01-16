@@ -1,19 +1,19 @@
 /**
- * localStorage utilities for persisting Ordia state
+ * localStorage utilities for persisting Ordiaa state
  * Data persists across browser refreshes
  */
 
-import type { OrdiaState, HabitCompletions, DailyLogs, DailyTodos } from "./types";
+import type { OrdiaaState, HabitCompletions, DailyLogs, DailyTodos } from "./types";
 import { DEFAULT_HABITS } from "./types";
 
-const STORAGE_KEY = "ordia-data";
+const STORAGE_KEY = "ordiaa-data";
 
 // Load state from localStorage, or return defaults if nothing saved
-export function loadState(): OrdiaState {
+export function loadState(): OrdiaaState {
     try {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
-            const parsed = JSON.parse(saved) as OrdiaState;
+            const parsed = JSON.parse(saved) as OrdiaaState;
             // Ensure todos exists (for migration from old data)
             if (!parsed.todos) {
                 parsed.todos = generateDemoTodos();
@@ -34,7 +34,7 @@ export function loadState(): OrdiaState {
 }
 
 // Save state to localStorage
-export function saveState(state: OrdiaState): void {
+export function saveState(state: OrdiaaState): void {
     try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch (error) {

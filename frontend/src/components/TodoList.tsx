@@ -5,15 +5,15 @@
  */
 
 import { useState } from "react";
-import type { OrdiaStateHook } from "@/hooks/useOrdiaState";
+import type { OrdiaaStateHook } from "@/hooks/useOrdiaState";
 import { cn } from "@/lib/utils";
 import { Maximize2 } from "lucide-react";
 
 interface TodoListProps {
-    getTodos: OrdiaStateHook["getTodos"];
-    addTodo: OrdiaStateHook["addTodo"];
-    toggleTodo: OrdiaStateHook["toggleTodo"];
-    deleteTodo: OrdiaStateHook["deleteTodo"];
+    getTodos: OrdiaaStateHook["getTodos"];
+    addTodo: OrdiaaStateHook["addTodo"];
+    toggleTodo: OrdiaaStateHook["toggleTodo"];
+    deleteTodo: OrdiaaStateHook["deleteTodo"];
     selectedDate: Date;
     onExpand: () => void;
 }
